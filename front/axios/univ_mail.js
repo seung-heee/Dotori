@@ -27,5 +27,5 @@ university.addEventListener("change", (event) => {
       break;
   }
   result_univ.textContent = resultUniv; // 담긴 대학교 메일 출력
-  //univ_email.placeholderContent = resultUniv;
+  //univ_email.placeholderContent = resultUniv;   
 });

@@ -8,7 +8,8 @@ form.addEventListener('submit', (event) => {
   
   const name = document.querySelector('#name').value;
   const university = document.querySelector('#university').value;
-  const email = document.querySelector('#email').value;
+  email = document.querySelector('#email').value;
+  const email = email + '@' + 
   
   axios.post('/api/signup', {
     name: name,
