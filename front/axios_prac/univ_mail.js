@@ -8,22 +8,22 @@ univ.addEventListener("change", (event) => {
 
   switch (selectedUniv) {
     case "sangmyung": // 상명대
-      resultUniv = "@sangmyung.kr"; 
+      resultUniv = "sangmyung.kr"; 
       break;
     case "swu": // 서울여대
-      resultUniv = "@swu.ac.kr";
+      resultUniv = "swu.ac.kr";
       break;
     case "kangnam": //강남대
-      resultUniv = "@kangnam.ac.kr";
+      resultUniv = "kangnam.ac.kr";
       break;
     case "hufs": //한국외대
-      resultUniv = "@hufs.ac.kr";
+      resultUniv = "hufs.ac.kr";
       break;
     case "skuniv": // 서경대
-      resultUniv = "@skuniv.ac.kr";
+      resultUniv = "skuniv.ac.kr";
       break;
     default: //성결대
-      resultUniv = "@sungkyul.ac.kr";
+      resultUniv = "sungkyul.ac.kr";
       break;
   }
 

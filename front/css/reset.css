@@ -47,3 +47,6 @@ table {
   src: url('../font/logo.ttf') format('truetype');
 }
 
+* {
+  font-family: 'Logo';
+}
