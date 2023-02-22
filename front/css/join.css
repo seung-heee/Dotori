@@ -1,5 +1,8 @@
 @media (max-width: 768px) {
 }
+* {
+  font-family: 'Noto Sans KR', sans-serif;
+}
 
 /* header */
 header {
@@ -7,10 +10,8 @@ header {
 }
 
 .header_container {
-  width: 80px;
   height: 70px;
   margin-bottom: 50px;
-  background-color: #FFA000;
   border-radius: 20px;
 
   position: absolute;
