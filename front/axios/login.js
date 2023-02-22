@@ -1,4 +1,5 @@
 import axios from 'axios';
+
 /* 
 const form = document.getElementById('login-form');
 
@@ -20,26 +21,27 @@ form.addEventListener('submit', async (event) => {
 });
 */
 
-  const form = document.querySelector('form');
-  const submitBtn = document.querySelector('#submitBtn');
+const form = document.querySelector('form');
+const submitBtn = document.querySelector('#submitBtn');
 
-  form.addEventListener('submit', (event) => {
-    event.preventDefault();
-    
-    const email = document.querySelector('#L_email').value;
-    const password = document.querySelector('#L_pw').value;
-    
-    axios.post('/api/login', {
-      email: email,
-      password: password
-    })
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
+
+  const email = document.querySelector('#email').value;
+  const password = document.querySelector('#password').value;
+
+  axios.post('/api/login', {
+    email: email,
+    password: password
+  })
     .then((response) => { // 성공
-      console.log(response);
-      window.location.href = 'home.html'; // url 수정 필요
+      console.log(response); // test
+      window.location.href = 'home.html'; // 메인 페이지로
       alert('Login Success!');
     })
     .catch((error) => { // 실패
       console.error(error);
+      window.location.href = '#'; // 로그인 페이지 재로딩
       alert('Login Failed!');
     });
-  });
+});
