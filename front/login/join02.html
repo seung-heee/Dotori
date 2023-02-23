@@ -35,23 +35,24 @@
       <section>
         <div class="section_container">
           <div class="section_items">
-            <label for="J_name" class="J_label">입력하신 메일로 인증코드를 보냈습니다. </label>
+            <label for="J_name" class="J_label">인증번호를 입력하세요.</label>
             <input type="text" placeholder="인증코드" name="code" id="code" required>
           </div>
+          <button class="email_button" id="email_button" onclick="emailBtn()">인증번호 전송</button>
 
           <div class="confirm_btn" style="margin-bottom: 30px;">
             <!--<a href="#">확인</a> -->
-            <button type="submit" id="submitBtn">확인</button>
+            <!-- <button type="submit" id="submitBtn">확인</button> -->
           </div>
           
           <!-- 비밀번호 -->
           <div class="section_items">
             <label for="J_pw" class="J_label">비밀번호</label>
-            <input type="password" placeholder="비밀번호를 입력해주세요" name="search_pw" id="search_pw" required>
+            <input type="password" placeholder="비밀번호를 입력해주세요" name="search_pw" id="search_pw">
 
             <label for="J_pw_confirm" class="J_label">비밀번호 확인  <span class="false_pw">비밀번호가 일치하지 않습니다.</span></label>
             
-            <input type="password" placeholder="비밀번호를 입력해주세요" name="confirm_pw" id="confirm_pw" required>
+            <input type="password" placeholder="비밀번호를 입력해주세요" name="confirm_pw" id="confirm_pw">
           </div>
 
           <div class="confirm_btn" style="margin-top: 15px">
@@ -64,9 +65,10 @@
   </div>
   
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-  <script src="../axios/join02.js"></script>
-
-  <script>
+  <!-- <script type='module' src="../js/register.js"></script> -->
+  <script src="../js/register.js"></script>
+  <!-- 비밀번호 확인 -->
+  <script> 
     const search_pw = document.getElementById('search_pw');
     const confirm_pw = document.getElementById('confirm_pw');
     const false_pw = document.querySelector('.false_pw');
@@ -81,5 +83,4 @@
     });
   </script>
 </body>
-
 </html>
