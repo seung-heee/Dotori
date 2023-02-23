@@ -1,7 +1,10 @@
-import axios from 'axios';
+// import axios from 'axios';
+var script = document.createElement('script');
+script.src = 'https://unpkg.com/axios/dist/axios.min.js';
+document.head.appendChild(script);
+// axios.defaults.withCredentials = true;
 
 const login_form = document.querySelector('#login_form');
-const submitBtn = document.querySelector('#submitBtn');
 
 login_form.addEventListener('submit', (event) => {
   event.preventDefault();
@@ -9,13 +12,15 @@ login_form.addEventListener('submit', (event) => {
   const email = document.querySelector('#email').value;
   const password = document.querySelector('#password').value;
 
-  axios.post('/api/user/login', {
+  axios.post('http://localhost:8080/api/user/login', {
     email: email,
     password: password
+  }, {
+    withCredentials: true
   })
     .then((response) => { // 성공
       console.log(response); // test
-      window.location.href = 'home.html'; // 메인 페이지로
+      // window.location.href = './join01.html'; // 메인 페이지로
       alert('Login Success!');
     })
     .catch((error) => { // 실패
@@ -24,7 +29,6 @@ login_form.addEventListener('submit', (event) => {
       alert('Login Failed!');
     });
 });
-
 
 //const axios = require('axios');
 /* 

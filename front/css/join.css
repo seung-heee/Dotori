@@ -37,7 +37,7 @@ header {
   flex-direction: column;
   width: 375px;
   text-align: right;
-  gap: 8px;
+  gap: 22px;
   margin-bottom: 40px;
 }
 
@@ -52,7 +52,8 @@ header {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 12px;
+  margin-top: 20px;
 }
 
 .section_items input, select {
@@ -182,4 +183,14 @@ header {
   position: absolute;
   right: 0px;
   top: -5px;
+}
+
+.btn {
+  margin-top: 20px;
+  width: 30%;
+  background-color: #FFA000;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  
 }

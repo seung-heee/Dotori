@@ -55,12 +55,25 @@
           </div>
         </div>
 
-        <div class="confirm_btn">
-          <!-- 누르면 이메일로 인증번호 발송되어야함 / 이름, 학교 저장
-          <a href="./join02.html">다음</a> -->
-          <button type="submit" id="submitBtn">다음</button>
+        <!-- 비밀번호 -->
+        <div class="section_items">
+          <label for="J_pw" class="J_label">비밀번호</label>
+          <input type="password" placeholder="비밀번호를 입력해주세요" name="search_pw" id="search_pw">
+
+          <label for="J_pw_confirm" class="J_label">비밀번호 확인 <span class="false_pw">비밀번호가 일치하지 않습니다.</span></label>
+          <input type="password" placeholder="비밀번호를 입력해주세요" name="confirm_pw" id="confirm_pw">
         </div>
-    </form>
+        
+        <div class="confirm_btn" style="margin-top: 15px">
+          <button type="submit">다음</button>
+        </div>
+      </div>
+
+      <!-- <div class="confirm_btn">
+          누르면 이메일로 인증번호 발송되어야함 / 이름, 학교 저장
+          <a href="./join02.html">다음</a> 
+           -->
+  </form>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>

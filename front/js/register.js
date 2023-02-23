@@ -1,5 +1,4 @@
-// import axios from '../axios';
-
+//import axios from '../axios';
 const univ = document.querySelector('#university'); // select 학교선택
 var result_univ = document.querySelector('#result'); // @ 뒤의 빈칸
 var resultUniv = ""; // 대학교 메일 담을 변수을 만든다.
@@ -39,23 +38,26 @@ myForm.addEventListener('submit', (event) => {
   event.preventDefault();
 
   const name = document.querySelector('#name').value; // 이름
-  const university = document.querySelector('#university').selectedOptions[0].textContent; // 대학교 이름
-  var email = document.querySelector('#email').value; // 이메일 앞부분
-  var full_email = email + '@' + result_univ.textContent; // 이메일 전체
+  const university = document.querySelector('#university').value; // 대학교 이름
+  //var email = document.querySelector('#email').value; // 이메일 앞부분
+  var email = email + '@' + result_univ.textContent; // 이메일 전체
+  const password = document.querySelector('#confirm_pw').value; // 이름
 
-  console.log(name, university, email);
-  console.log(full_email); // test
+  //console.log(name, university, email);
+  //console.log(full_email); // test
   
   // axios
-  axios.post('/api/user/register', {
-    name: name,
+  axios.post('http://localhost:8080/api/user/register', {
+    //name: name,
     university: university,
+    password: password,
+    //email: email,
     email: email,
-    full_email: full_email,
   })
   .then((response) => { // 성공
     console.log(response);
-    window.location.href = './join02.html';
+    window.location.href = './login.html';
+    alert('성공!');
     // 데베에 단순 데이터 저장?
   })
   .catch((error) => { // 실패
